@@ -1,0 +1,46 @@
+﻿@model prjEasyDent.Model.tblAntecedente
+
+@{
+
+}
+@if (Session["LogedUserFullname"] != null)
+{
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3 class="panel-title">Mostrar Antecedentes</h3></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" method="post" action=@Url.Action("Modificar_Paciente", "Home")>
+                                
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        Patología
+                                    </dt>
+                                    <dd>
+                                        @ViewBag.patologia
+                                    </dd>
+                                    <dt>
+                                        Observación
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.observacion)
+                                    </dd>
+                                </dl>
+                                <p>
+                                    @Html.ActionLink("Siguiente", "Mostrar_Odontograma", new { id = Model.fk_historial })
+                                </p>
+
+                            </form>
+                        </div> <!-- panel-body -->
+                    </div> <!-- panel -->
+                </div> <!-- col -->
+            </div><!-- Row -->
+
+        </div> <!-- content -->
+    </div>
+}
+

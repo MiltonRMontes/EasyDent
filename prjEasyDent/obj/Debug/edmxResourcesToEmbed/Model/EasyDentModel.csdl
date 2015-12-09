@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdEasyDentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblAntecedente">
+    <Key>
+      <PropertyRef Name="id_antecedente" />
+    </Key>
+    <Property Name="id_antecedente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_historial" Type="Int32" Nullable="false" />
+    <Property Name="fk_patologia" Type="Int32" Nullable="false" />
+    <Property Name="observacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblHistorial" Relationship="Self.FK_tblAntecedente_tblHistorial" FromRole="tblAntecedente" ToRole="tblHistorial" />
+    <NavigationProperty Name="tblPatologia" Relationship="Self.FK_tblAntecedente_tblPatologia" FromRole="tblAntecedente" ToRole="tblPatologia" />
+  </EntityType>
+  <EntityType Name="tblCita">
+    <Key>
+      <PropertyRef Name="id_cita" />
+    </Key>
+    <Property Name="id_cita" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha_cita" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fk_odontologo" Type="Int32" Nullable="false" />
+    <Property Name="fk_paciente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblPaciente" Relationship="Self.FK_tblCita_tblPaciente" FromRole="tblCita" ToRole="tblPaciente" />
+    <NavigationProperty Name="tblUsuario" Relationship="Self.FK_tblCita_tblUsuario" FromRole="tblCita" ToRole="tblUsuario" />
+  </EntityType>
+  <EntityType Name="tblHistorial">
+    <Key>
+      <PropertyRef Name="id_historial" />
+    </Key>
+    <Property Name="id_historial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="motivo_consulta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="enfermedad_actual" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="antecedentes_familiares" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cepilladas_dia" Type="Int32" Nullable="false" />
+    <Property Name="momento_cepilladas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usa_seda_dental" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="momento_seda" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numero_dientes" Type="Int32" Nullable="false" />
+    <Property Name="dientes_cariados" Type="Int32" Nullable="false" />
+    <Property Name="dientes_obturados" Type="Int32" Nullable="false" />
+    <Property Name="dientes_extraidos" Type="Int32" Nullable="false" />
+    <Property Name="dientes_perdidos" Type="Int32" Nullable="false" />
+    <Property Name="total_dientes_cop" Type="Int32" Nullable="false" />
+    <Property Name="labios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="carrillos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="lengua" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="amigdalas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="paladar_duro" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="piso_boca" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="frenillos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="mucosa_masticadora" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="perfil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="oclusion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="actividad_muscular" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="atm_palpacion_muscular" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="diagnostico_presuntivo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="diagnostico_definitivo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="interpretacion_paraclinicos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pronostico" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="plan_tratamiento" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="evolucion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fk_paciente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblAntecedentes" Relationship="Self.FK_tblAntecedente_tblHistorial" FromRole="tblHistorial" ToRole="tblAntecedente" />
+    <NavigationProperty Name="tblPaciente" Relationship="Self.FK_tblHistorial_tblPaciente" FromRole="tblHistorial" ToRole="tblPaciente" />
+    <NavigationProperty Name="tblOdontogramas" Relationship="Self.FK_tblOdontograma_tblHistorial" FromRole="tblHistorial" ToRole="tblOdontograma" />
+  </EntityType>
+  <EntityType Name="tblOdontograma">
+    <Key>
+      <PropertyRef Name="id_odontograma" />
+    </Key>
+    <Property Name="id_odontograma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha_odontograma" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="d_18" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_17" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_16" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_15" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_14" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_13" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_12" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_11" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_21" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_22" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_23" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_24" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_25" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_26" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_27" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_28" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_55" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_54" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_53" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_52" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_51" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_61" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_62" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_63" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_64" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_65" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_38" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_37" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_36" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_35" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_34" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_33" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_32" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_31" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_41" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_42" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_43" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_44" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_45" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_46" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_47" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_48" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_75" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_74" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_73" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_72" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_71" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_81" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_82" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_83" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_84" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="d_85" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="fk_historial" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblHistorial" Relationship="Self.FK_tblOdontograma_tblHistorial" FromRole="tblOdontograma" ToRole="tblHistorial" />
+  </EntityType>
+  <EntityType Name="tblPaciente">
+    <Key>
+      <PropertyRef Name="id_paciente" />
+    </Key>
+    <Property Name="id_paciente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tipo_documento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numero_documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_nacimiento" Type="DateTime" Precision="0" />
+    <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" Nullable="false" />
+    <Property Name="estado_civil" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sexo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ocupacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="celular" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nombre_acudiente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="relacion_acudiente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono_acudiente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="fk_odontologo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblCitas" Relationship="Self.FK_tblCita_tblPaciente" FromRole="tblPaciente" ToRole="tblCita" />
+    <NavigationProperty Name="tblHistorials" Relationship="Self.FK_tblHistorial_tblPaciente" FromRole="tblPaciente" ToRole="tblHistorial" />
+    <NavigationProperty Name="tblUsuario" Relationship="Self.FK_tblPaciente_tblUsuario" FromRole="tblPaciente" ToRole="tblUsuario" />
+  </EntityType>
+  <EntityType Name="tblPatologia">
+    <Key>
+      <PropertyRef Name="id_patologia" />
+    </Key>
+    <Property Name="id_patologia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblAntecedentes" Relationship="Self.FK_tblAntecedente_tblPatologia" FromRole="tblPatologia" ToRole="tblAntecedente" />
+  </EntityType>
+  <EntityType Name="tblUsuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipo_documento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numero_documento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="titulos" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="direccion_consultorio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="direccion_hogar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefono_consultorio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="telefono_personal" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="estado" Type="Int32" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fecha_nacimiento" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="tblCitas" Relationship="Self.FK_tblCita_tblUsuario" FromRole="tblUsuario" ToRole="tblCita" />
+    <NavigationProperty Name="tblPacientes" Relationship="Self.FK_tblPaciente_tblUsuario" FromRole="tblUsuario" ToRole="tblPaciente" />
+  </EntityType>
+  <Association Name="FK_tblAntecedente_tblHistorial">
+    <End Role="tblHistorial" Type="Self.tblHistorial" Multiplicity="1" />
+    <End Role="tblAntecedente" Type="Self.tblAntecedente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHistorial">
+        <PropertyRef Name="id_historial" />
+      </Principal>
+      <Dependent Role="tblAntecedente">
+        <PropertyRef Name="fk_historial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAntecedente_tblPatologia">
+    <End Role="tblPatologia" Type="Self.tblPatologia" Multiplicity="1" />
+    <End Role="tblAntecedente" Type="Self.tblAntecedente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPatologia">
+        <PropertyRef Name="id_patologia" />
+      </Principal>
+      <Dependent Role="tblAntecedente">
+        <PropertyRef Name="fk_patologia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCita_tblPaciente">
+    <End Role="tblPaciente" Type="Self.tblPaciente" Multiplicity="1" />
+    <End Role="tblCita" Type="Self.tblCita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPaciente">
+        <PropertyRef Name="id_paciente" />
+      </Principal>
+      <Dependent Role="tblCita">
+        <PropertyRef Name="fk_paciente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCita_tblUsuario">
+    <End Role="tblUsuario" Type="Self.tblUsuario" Multiplicity="1" />
+    <End Role="tblCita" Type="Self.tblCita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUsuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tblCita">
+        <PropertyRef Name="fk_odontologo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHistorial_tblPaciente">
+    <End Role="tblPaciente" Type="Self.tblPaciente" Multiplicity="1" />
+    <End Role="tblHistorial" Type="Self.tblHistorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPaciente">
+        <PropertyRef Name="id_paciente" />
+      </Principal>
+      <Dependent Role="tblHistorial">
+        <PropertyRef Name="fk_paciente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblOdontograma_tblHistorial">
+    <End Role="tblHistorial" Type="Self.tblHistorial" Multiplicity="1" />
+    <End Role="tblOdontograma" Type="Self.tblOdontograma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHistorial">
+        <PropertyRef Name="id_historial" />
+      </Principal>
+      <Dependent Role="tblOdontograma">
+        <PropertyRef Name="fk_historial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPaciente_tblUsuario">
+    <End Role="tblUsuario" Type="Self.tblUsuario" Multiplicity="1" />
+    <End Role="tblPaciente" Type="Self.tblPaciente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUsuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tblPaciente">
+        <PropertyRef Name="fk_odontologo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdEasyDentEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAntecedentes" EntityType="Self.tblAntecedente" />
+    <EntitySet Name="tblCitas" EntityType="Self.tblCita" />
+    <EntitySet Name="tblHistorials" EntityType="Self.tblHistorial" />
+    <EntitySet Name="tblOdontogramas" EntityType="Self.tblOdontograma" />
+    <EntitySet Name="tblPacientes" EntityType="Self.tblPaciente" />
+    <EntitySet Name="tblPatologias" EntityType="Self.tblPatologia" />
+    <EntitySet Name="tblUsuarios" EntityType="Self.tblUsuario" />
+    <AssociationSet Name="FK_tblAntecedente_tblHistorial" Association="Self.FK_tblAntecedente_tblHistorial">
+      <End Role="tblHistorial" EntitySet="tblHistorials" />
+      <End Role="tblAntecedente" EntitySet="tblAntecedentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAntecedente_tblPatologia" Association="Self.FK_tblAntecedente_tblPatologia">
+      <End Role="tblPatologia" EntitySet="tblPatologias" />
+      <End Role="tblAntecedente" EntitySet="tblAntecedentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCita_tblPaciente" Association="Self.FK_tblCita_tblPaciente">
+      <End Role="tblPaciente" EntitySet="tblPacientes" />
+      <End Role="tblCita" EntitySet="tblCitas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCita_tblUsuario" Association="Self.FK_tblCita_tblUsuario">
+      <End Role="tblUsuario" EntitySet="tblUsuarios" />
+      <End Role="tblCita" EntitySet="tblCitas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHistorial_tblPaciente" Association="Self.FK_tblHistorial_tblPaciente">
+      <End Role="tblPaciente" EntitySet="tblPacientes" />
+      <End Role="tblHistorial" EntitySet="tblHistorials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblOdontograma_tblHistorial" Association="Self.FK_tblOdontograma_tblHistorial">
+      <End Role="tblHistorial" EntitySet="tblHistorials" />
+      <End Role="tblOdontograma" EntitySet="tblOdontogramas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPaciente_tblUsuario" Association="Self.FK_tblPaciente_tblUsuario">
+      <End Role="tblUsuario" EntitySet="tblUsuarios" />
+      <End Role="tblPaciente" EntitySet="tblPacientes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

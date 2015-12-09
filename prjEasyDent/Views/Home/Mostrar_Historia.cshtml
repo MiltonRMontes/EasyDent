@@ -1,0 +1,290 @@
+﻿@model prjEasyDent.Model.tblHistorial
+
+@{
+
+}
+@if (Session["LogedUserFullname"] != null)
+{
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3 class="panel-title">Mostrar Historia Clínica</h3></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" method="post" action=@Url.Action("Modificar_Paciente", "Home")>
+
+                                <div>
+
+                                    <dl class="dl-horizontal">
+                                        <dt>
+                                            Nombres
+                                        </dt>
+
+                                        <dd>
+                                            @ViewBag.nombres
+                                        </dd>
+
+                                        <dt>
+                                            Motivo de la Consulta
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.motivo_consulta)
+                                        </dd>
+
+                                        <dt>
+                                            Enfermedad Actual
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.enfermedad_actual)
+                                        </dd>
+
+                                        <dt>
+                                            Antecedentes Familiares
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.antecedentes_familiares)
+                                        </dd>
+
+                                        <dt>
+                                            ¿Cuántas veces se cepilla al día?
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.cepilladas_dia)
+                                        </dd>
+
+                                        <dt>
+                                            ¿En qué momento se cepilla?
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.momento_cepilladas)
+                                        </dd>
+
+                                        <dt>
+                                            ¿Usa seda dental?
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.usa_seda_dental)
+                                        </dd>
+
+                                        <dt>
+                                            ¿En qué momento usa la ceda dental?
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.momento_seda)
+                                        </dd>
+
+                                        <dt>
+                                            Número de dientes
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.numero_dientes)
+                                        </dd>
+
+                                        <dt>
+                                            Dientes Cariados
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.dientes_cariados)
+                                        </dd>
+
+                                        <dt>
+                                            Dientes Obturados
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.dientes_obturados)
+                                        </dd>
+
+                                        <dt>
+                                            Dientes Extraidos
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.dientes_extraidos)
+                                        </dd>
+
+                                        <dt>
+                                            Dientes Perdidos
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.dientes_perdidos)
+                                        </dd>
+
+                                        <dt>
+                                            Total dientes COP
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.total_dientes_cop)
+                                        </dd>
+
+                                        <dt>
+                                            Labios
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.labios)
+                                        </dd>
+
+                                        <dt>
+                                            Carrillos
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.carrillos)
+                                        </dd>
+
+                                        <dt>
+                                            Lengua
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.lengua)
+                                        </dd>
+
+                                        <dt>
+                                            Amígdalas
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.amigdalas)
+                                        </dd>
+
+                                        <dt>
+                                            Paladar Duro
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.paladar_duro)
+                                        </dd>
+
+                                        <dt>
+                                            Piso Boca
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.piso_boca)
+                                        </dd>
+
+                                        <dt>
+                                            Frenillos
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.frenillos)
+                                        </dd>
+
+                                        <dt>
+                                            Mucosa Masticadora
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.mucosa_masticadora)
+                                        </dd>
+
+                                        <dt>
+                                            Perfil
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.perfil)
+                                        </dd>
+
+                                        <dt>
+                                            Oclusión
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.oclusion)
+                                        </dd>
+
+                                        <dt>
+                                            Actividad Muscular
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.actividad_muscular)
+                                        </dd>
+
+                                        <dt>
+                                            ATM Palpación Muscular
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.atm_palpacion_muscular)
+                                        </dd>
+
+                                        <dt>
+                                            Diagnóstico Presuntivo
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.diagnostico_presuntivo)
+                                        </dd>
+
+                                        <dt>
+                                            Diagnóstico Definitivo
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.diagnostico_definitivo)
+                                        </dd>
+
+                                        <dt>
+                                            Interpretación Paraclínicos
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.interpretacion_paraclinicos)
+                                        </dd>
+
+                                        <dt>
+                                            Pronóstico
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.pronostico)
+                                        </dd>
+
+                                        <dt>
+                                            Plan de Tratamiento
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.plan_tratamiento)
+                                        </dd>
+
+                                        <dt>
+                                            Evolución
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.evolucion)
+                                        </dd>
+
+                                    </dl>
+                                </div>
+                                <p>
+                                    @Html.ActionLink("Siguiente", "Mostrar_Antecedentes", new { id = Model.id_historial }) |
+                                </p>
+                            </form>
+                        </div> <!-- panel-body -->
+                    </div> <!-- panel -->
+                </div> <!-- col -->
+            </div><!-- Row -->
+
+        </div> <!-- content -->
+    </div>
+}

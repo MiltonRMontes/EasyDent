@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdEasyDentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'bdEasyDent.dbo.tblusuarios' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="tblusuarios">
+    <Key>
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="pass" />
+    </Key>
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pass" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="bdEasyDentModelStoreContainer">
+    <EntitySet Name="tblusuarios" EntityType="Self.tblusuarios" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblusuarios].[nombre] AS [nombre], 
+    [tblusuarios].[pass] AS [pass]
+    FROM [dbo].[tblusuarios] AS [tblusuarios]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

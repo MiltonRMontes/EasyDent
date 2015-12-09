@@ -1,0 +1,262 @@
+﻿@model prjEasyDent.Model.tblHistorial
+
+@{
+    ViewBag.Title = "Crear Historial";
+}
+
+@if (Session["LogedUserFullname"] != null)
+{
+                <!-- Start content -->
+    <div class="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3 class="panel-title">Crear Histora Clínica</h3></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" method="post" action=@Url.Action("GuardarHistorial", "Home")>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Motivo de la Consulta</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.motivo_consulta, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text", @row = "5" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Enfermedad Actual</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.enfermedad_actual, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text", @row = "5" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Antecedentes Familiares</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.antecedentes_familiares, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">¿Cuántas veces se cepilla al día?</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.cepilladas_dia, new { htmlAttributes = new { @class = "form-control input-lg", @type = "number", @min = "0" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">¿En qué momento?</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.momento_cepilladas, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">¿Usa seda Dental?</label>
+                                    <div class="col-sm-10">
+                                        <select id="usa_seda_dental" name="usa_seda_dental" class="form-control">
+                                            <option>Si</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label class="col-md-2 control-label" for="example-email">¿En qué momento?</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.momento_seda, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Número de dientes</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.numero_dientes, new { htmlAttributes = new { @class = "form-control input-lg", @type = "number", @min = "0" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Cariados</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.dientes_cariados, new { htmlAttributes = new { @class = "form-control input-lg", @type = "number", @min = "0" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Opturados</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.dientes_obturados, new { htmlAttributes = new { @class = "form-control input-lg", @type = "number", @min = "0" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Extraidos</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.dientes_extraidos, new { htmlAttributes = new { @class = "form-control input-lg", @type = "number", @min = "0" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Perdidos</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.dientes_perdidos, new { htmlAttributes = new { @class = "form-control input-lg", @type = "number", @min = "0" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Total Cop</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.total_dientes_cop, new { htmlAttributes = new { @class = "form-control input-lg", @type = "number", @min = "0" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Labios</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.labios, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Carrillos</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.carrillos, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Lengua</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.lengua, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Amígdalas</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.amigdalas, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Paladar Duro</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.paladar_duro, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Piso de Boca</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.piso_boca, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Frenillos</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.frenillos, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="example-email">Mucosa Masticatoria</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.mucosa_masticadora, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Perfil</label>
+                                    <div class="col-sm-10">
+                                        <select id="perfil" name="perfil" class="form-control">
+                                            <option>Recto</option>
+                                            <option>Concavo</option>
+                                            <option>Convexo</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Conclusion</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.oclusion, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text", @row = "3" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Actividad Muscular</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.actividad_muscular, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text", @row = "2" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">A.T.M (Palpacion Muscular)</label>
+                                    <div class="col-sm-10">
+                                        <select id="atm_palpacion_muscular" name="atm_palpacion_muscular" class="form-control">
+                                            <option>Normal</option>
+                                            <option>Anormal</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Dianostico Presuntivo</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.diagnostico_presuntivo, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text", @rows = "3" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Dianostico Definitivo</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.diagnostico_definitivo, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text", @rows = "3" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Interpretacion de examenes paraclinicos</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.interpretacion_paraclinicos, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text", @rows = "3" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Pronostico</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.pronostico, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text", @rows = "3" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Plan de tratamiento</label>
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(model => model.plan_tratamiento, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text", @rows = "3" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Evolución</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.evolucion, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center m-t-40">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-primary waves-effect waves-light btn-lg w-lg" type="submit">Siguiente</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div> <!-- panel-body -->
+                    </div> <!-- panel -->
+                </div> <!-- col -->
+            </div><!-- Row -->
+
+        </div> <!-- content -->
+    </div>
+}

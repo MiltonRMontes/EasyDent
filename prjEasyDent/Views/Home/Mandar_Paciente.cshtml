@@ -1,0 +1,58 @@
+﻿@model IEnumerable<prjEasyDent.Model.tblPaciente>
+
+@{
+    
+}
+@if (Session["LogedUserFullname"] != null)
+{
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3 class="panel-title">Modificar Pacientes</h3></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" method="post" action=@Url.Action("Modificar_Paciente", "Home")>
+                                <table class="table">
+                                    <tr>
+                                        <th>
+                                            Nombres
+                                        </th>
+                                        <th>
+                                            Apellidos
+                                        </th>
+                                        <th>
+                                            Número de Documento
+                                        </th>
+                                        <th></th>
+                                    </tr>
+
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.nombres)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.apellidos)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.numero_documento)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Modificar", "Modificar_Paciente", new { id = item.id_paciente })
+                                            </td>
+                                        </tr>
+                                    }
+                                </table>
+                            </form>
+                        </div> <!-- panel-body -->
+                    </div> <!-- panel -->
+                </div> <!-- col -->
+            </div><!-- Row -->
+
+        </div> <!-- content -->
+    </div>
+}

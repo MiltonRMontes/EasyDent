@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdEasyDentModelStoreContainer" CdmEntityContainer="bdEasyDentEntities">
+    <EntitySetMapping Name="tblAntecedentes">
+      <EntityTypeMapping TypeName="bdEasyDentModel.tblAntecedente">
+        <MappingFragment StoreEntitySet="tblAntecedente">
+          <ScalarProperty Name="id_antecedente" ColumnName="id_antecedente" />
+          <ScalarProperty Name="fk_historial" ColumnName="fk_historial" />
+          <ScalarProperty Name="fk_patologia" ColumnName="fk_patologia" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCitas">
+      <EntityTypeMapping TypeName="bdEasyDentModel.tblCita">
+        <MappingFragment StoreEntitySet="tblCita">
+          <ScalarProperty Name="id_cita" ColumnName="id_cita" />
+          <ScalarProperty Name="fecha_cita" ColumnName="fecha_cita" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fk_odontologo" ColumnName="fk_odontologo" />
+          <ScalarProperty Name="fk_paciente" ColumnName="fk_paciente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHistorials">
+      <EntityTypeMapping TypeName="bdEasyDentModel.tblHistorial">
+        <MappingFragment StoreEntitySet="tblHistorial">
+          <ScalarProperty Name="id_historial" ColumnName="id_historial" />
+          <ScalarProperty Name="motivo_consulta" ColumnName="motivo_consulta" />
+          <ScalarProperty Name="enfermedad_actual" ColumnName="enfermedad_actual" />
+          <ScalarProperty Name="antecedentes_familiares" ColumnName="antecedentes_familiares" />
+          <ScalarProperty Name="cepilladas_dia" ColumnName="cepilladas_dia" />
+          <ScalarProperty Name="momento_cepilladas" ColumnName="momento_cepilladas" />
+          <ScalarProperty Name="usa_seda_dental" ColumnName="usa_seda_dental" />
+          <ScalarProperty Name="momento_seda" ColumnName="momento_seda" />
+          <ScalarProperty Name="numero_dientes" ColumnName="numero_dientes" />
+          <ScalarProperty Name="dientes_cariados" ColumnName="dientes_cariados" />
+          <ScalarProperty Name="dientes_obturados" ColumnName="dientes_obturados" />
+          <ScalarProperty Name="dientes_extraidos" ColumnName="dientes_extraidos" />
+          <ScalarProperty Name="dientes_perdidos" ColumnName="dientes_perdidos" />
+          <ScalarProperty Name="total_dientes_cop" ColumnName="total_dientes_cop" />
+          <ScalarProperty Name="labios" ColumnName="labios" />
+          <ScalarProperty Name="carrillos" ColumnName="carrillos" />
+          <ScalarProperty Name="lengua" ColumnName="lengua" />
+          <ScalarProperty Name="amigdalas" ColumnName="amigdalas" />
+          <ScalarProperty Name="paladar_duro" ColumnName="paladar_duro" />
+          <ScalarProperty Name="piso_boca" ColumnName="piso_boca" />
+          <ScalarProperty Name="frenillos" ColumnName="frenillos" />
+          <ScalarProperty Name="mucosa_masticadora" ColumnName="mucosa_masticadora" />
+          <ScalarProperty Name="perfil" ColumnName="perfil" />
+          <ScalarProperty Name="oclusion" ColumnName="oclusion" />
+          <ScalarProperty Name="actividad_muscular" ColumnName="actividad_muscular" />
+          <ScalarProperty Name="atm_palpacion_muscular" ColumnName="atm_palpacion_muscular" />
+          <ScalarProperty Name="diagnostico_presuntivo" ColumnName="diagnostico_presuntivo" />
+          <ScalarProperty Name="diagnostico_definitivo" ColumnName="diagnostico_definitivo" />
+          <ScalarProperty Name="interpretacion_paraclinicos" ColumnName="interpretacion_paraclinicos" />
+          <ScalarProperty Name="pronostico" ColumnName="pronostico" />
+          <ScalarProperty Name="plan_tratamiento" ColumnName="plan_tratamiento" />
+          <ScalarProperty Name="evolucion" ColumnName="evolucion" />
+          <ScalarProperty Name="fk_paciente" ColumnName="fk_paciente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOdontogramas">
+      <EntityTypeMapping TypeName="bdEasyDentModel.tblOdontograma">
+        <MappingFragment StoreEntitySet="tblOdontograma">
+          <ScalarProperty Name="id_odontograma" ColumnName="id_odontograma" />
+          <ScalarProperty Name="fecha_odontograma" ColumnName="fecha_odontograma" />
+          <ScalarProperty Name="d_18" ColumnName="d_18" />
+          <ScalarProperty Name="d_17" ColumnName="d_17" />
+          <ScalarProperty Name="d_16" ColumnName="d_16" />
+          <ScalarProperty Name="d_15" ColumnName="d_15" />
+          <ScalarProperty Name="d_14" ColumnName="d_14" />
+          <ScalarProperty Name="d_13" ColumnName="d_13" />
+          <ScalarProperty Name="d_12" ColumnName="d_12" />
+          <ScalarProperty Name="d_11" ColumnName="d_11" />
+          <ScalarProperty Name="d_21" ColumnName="d_21" />
+          <ScalarProperty Name="d_22" ColumnName="d_22" />
+          <ScalarProperty Name="d_23" ColumnName="d_23" />
+          <ScalarProperty Name="d_24" ColumnName="d_24" />
+          <ScalarProperty Name="d_25" ColumnName="d_25" />
+          <ScalarProperty Name="d_26" ColumnName="d_26" />
+          <ScalarProperty Name="d_27" ColumnName="d_27" />
+          <ScalarProperty Name="d_28" ColumnName="d_28" />
+          <ScalarProperty Name="d_55" ColumnName="d_55" />
+          <ScalarProperty Name="d_54" ColumnName="d_54" />
+          <ScalarProperty Name="d_53" ColumnName="d_53" />
+          <ScalarProperty Name="d_52" ColumnName="d_52" />
+          <ScalarProperty Name="d_51" ColumnName="d_51" />
+          <ScalarProperty Name="d_61" ColumnName="d_61" />
+          <ScalarProperty Name="d_62" ColumnName="d_62" />
+          <ScalarProperty Name="d_63" ColumnName="d_63" />
+          <ScalarProperty Name="d_64" ColumnName="d_64" />
+          <ScalarProperty Name="d_65" ColumnName="d_65" />
+          <ScalarProperty Name="d_38" ColumnName="d_38" />
+          <ScalarProperty Name="d_37" ColumnName="d_37" />
+          <ScalarProperty Name="d_36" ColumnName="d_36" />
+          <ScalarProperty Name="d_35" ColumnName="d_35" />
+          <ScalarProperty Name="d_34" ColumnName="d_34" />
+          <ScalarProperty Name="d_33" ColumnName="d_33" />
+          <ScalarProperty Name="d_32" ColumnName="d_32" />
+          <ScalarProperty Name="d_31" ColumnName="d_31" />
+          <ScalarProperty Name="d_41" ColumnName="d_41" />
+          <ScalarProperty Name="d_42" ColumnName="d_42" />
+          <ScalarProperty Name="d_43" ColumnName="d_43" />
+          <ScalarProperty Name="d_44" ColumnName="d_44" />
+          <ScalarProperty Name="d_45" ColumnName="d_45" />
+          <ScalarProperty Name="d_46" ColumnName="d_46" />
+          <ScalarProperty Name="d_47" ColumnName="d_47" />
+          <ScalarProperty Name="d_48" ColumnName="d_48" />
+          <ScalarProperty Name="d_75" ColumnName="d_75" />
+          <ScalarProperty Name="d_74" ColumnName="d_74" />
+          <ScalarProperty Name="d_73" ColumnName="d_73" />
+          <ScalarProperty Name="d_72" ColumnName="d_72" />
+          <ScalarProperty Name="d_71" ColumnName="d_71" />
+          <ScalarProperty Name="d_81" ColumnName="d_81" />
+          <ScalarProperty Name="d_82" ColumnName="d_82" />
+          <ScalarProperty Name="d_83" ColumnName="d_83" />
+          <ScalarProperty Name="d_84" ColumnName="d_84" />
+          <ScalarProperty Name="d_85" ColumnName="d_85" />
+          <ScalarProperty Name="fk_historial" ColumnName="fk_historial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPacientes">
+      <EntityTypeMapping TypeName="bdEasyDentModel.tblPaciente">
+        <MappingFragment StoreEntitySet="tblPaciente">
+          <ScalarProperty Name="id_paciente" ColumnName="id_paciente" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="tipo_documento" ColumnName="tipo_documento" />
+          <ScalarProperty Name="numero_documento" ColumnName="numero_documento" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="estado_civil" ColumnName="estado_civil" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="ocupacion" ColumnName="ocupacion" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="nombre_acudiente" ColumnName="nombre_acudiente" />
+          <ScalarProperty Name="relacion_acudiente" ColumnName="relacion_acudiente" />
+          <ScalarProperty Name="telefono_acudiente" ColumnName="telefono_acudiente" />
+          <ScalarProperty Name="fk_odontologo" ColumnName="fk_odontologo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPatologias">
+      <EntityTypeMapping TypeName="bdEasyDentModel.tblPatologia">
+        <MappingFragment StoreEntitySet="tblPatologia">
+          <ScalarProperty Name="id_patologia" ColumnName="id_patologia" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsuarios">
+      <EntityTypeMapping TypeName="bdEasyDentModel.tblUsuario">
+        <MappingFragment StoreEntitySet="tblUsuario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="tipo_documento" ColumnName="tipo_documento" />
+          <ScalarProperty Name="numero_documento" ColumnName="numero_documento" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="titulos" ColumnName="titulos" />
+          <ScalarProperty Name="direccion_consultorio" ColumnName="direccion_consultorio" />
+          <ScalarProperty Name="direccion_hogar" ColumnName="direccion_hogar" />
+          <ScalarProperty Name="telefono_consultorio" ColumnName="telefono_consultorio" />
+          <ScalarProperty Name="telefono_personal" ColumnName="telefono_personal" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

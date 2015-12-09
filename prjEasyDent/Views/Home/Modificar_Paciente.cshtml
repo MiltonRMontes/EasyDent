@@ -1,0 +1,100 @@
+﻿@model prjEasyDent.Model.tblPaciente
+
+@{
+
+}
+@if (Session["LogedUserFullname"] != null)
+{
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3 class="panel-title">Crear Antecedentes</h3></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" method="post" action=@Url.Action("Modificar_Paciente", "Home")>
+
+                                @Html.HiddenFor(model => model.id_paciente)
+                                @Html.HiddenFor(model => model.tipo_documento)
+                                @Html.HiddenFor(model => model.estado)
+                                @Html.HiddenFor(model => model.estado_civil)
+                                @Html.HiddenFor(model => model.sexo)
+                                @Html.HiddenFor(model => model.ocupacion)
+                                @Html.HiddenFor(model => model.nombre_acudiente)
+                                @Html.HiddenFor(model => model.relacion_acudiente)
+                                @Html.HiddenFor(model => model.telefono_acudiente)
+                                @Html.HiddenFor(model => model.fk_odontologo)
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Nombres</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.nombres, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Apellidos</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.apellidos, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Número de Documento</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.numero_documento, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Email</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Teléfono</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Fecha de Nacimiento</label>
+                                    <div class="col-md-10">
+                                        <div class="input-group">
+                                            @Html.EditorFor(model => model.fecha_nacimiento, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Dirección de Domicilio</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.direccion, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Teléfono Celular</label>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.celular, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center m-t-40">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-primary waves-effect waves-light btn-lg w-lg" type="submit">Modificar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div> <!-- panel-body -->
+                    </div> <!-- panel -->
+                </div> <!-- col -->
+            </div><!-- Row -->
+        </div> <!-- content -->
+    </div>
+}

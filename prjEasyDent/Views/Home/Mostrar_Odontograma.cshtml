@@ -1,0 +1,456 @@
+﻿@model prjEasyDent.Model.tblOdontograma
+
+@{
+   
+}
+
+@if (Session["LogedUserFullname"] != null)
+{
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3 class="panel-title">Mostrar Odontograma</h3></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" method="post" action=@Url.Action("Modificar_Paciente", "Home")>
+                                <div>
+                                    <dl class="dl-horizontal">
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.fecha_odontograma)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.fecha_odontograma)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_18)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_18)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_17)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_17)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_16)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_16)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_15)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_15)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_14)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_14)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_13)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_13)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_12)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_12)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_11)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_11)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_21)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_21)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_22)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_22)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_23)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_23)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_24)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_24)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_25)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_25)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_26)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_26)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_27)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_27)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_28)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_28)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_55)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_55)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_54)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_54)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_53)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_53)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_52)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_52)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_51)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_51)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_61)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_61)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_62)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_62)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_63)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_63)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_64)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_64)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_65)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_65)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_38)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_38)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_37)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_37)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_36)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_36)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_35)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_35)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_34)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_34)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_33)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_33)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_32)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_32)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_31)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_31)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_41)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_41)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_42)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_42)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_43)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_43)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_44)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_44)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_45)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_45)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_46)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_46)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_47)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_47)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_48)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_48)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_75)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_75)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_74)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_74)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_73)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_73)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_72)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_72)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_71)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_71)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_81)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_81)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_82)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_82)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_83)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_83)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_84)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_84)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.d_85)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.d_85)
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <p>
+                                    @Html.ActionLink("Inicio", "inicio")
+                                </p>
+                            </form>
+                        </div> <!-- panel-body -->
+                    </div> <!-- panel -->
+                </div> <!-- col -->
+            </div><!-- Row -->
+
+        </div> <!-- content -->
+    </div>
+}

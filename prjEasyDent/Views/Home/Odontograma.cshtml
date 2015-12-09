@@ -1,0 +1,409 @@
+﻿@model prjEasyDent.Model.tblOdontograma
+
+@{
+    ViewBag.Title = "Crear Odontograma";
+}
+
+@if (Session["LogedUserFullname"] != null)
+{
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3 class="panel-title">Crear Odontograma</h3></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" role="form" method="post" action=@Url.Action("GuardarOdontograma", "Home")>
+                                <div class="col-md-6">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"></div>
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">18</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_18, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">17</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_17, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">16</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_16, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">15</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_15, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">14</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_14, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">13</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_13, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">12</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_12, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">11</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_11, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">21</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_21, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">22</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_22, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">23</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_23, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">24</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_24, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">25</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_25, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">26</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_26, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">27</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_27, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">28</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_28, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">55</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_55, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">54</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_54, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">53</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_53, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">52</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_52, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">51</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_51, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">61</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_61, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">62</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_62, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">63</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_63, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">64</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_64, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">65</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_65, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"></div>
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">38</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_38, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">37</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_37, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">36</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_36, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">35</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_35, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">34</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_34, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">33</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_33, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">32</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_32, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">31</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_31, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">41</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_41, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">42</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_42, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">43</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_43, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">44</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_44, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">45</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_45, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">46</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_46, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">47</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_47, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">48</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_48, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">75</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_75, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">74</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_74, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">73</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_73, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">72</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_72, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">71</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_71, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">81</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_81, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">82</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_82, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">83</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_83, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">84</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_84, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">85</label>
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.d_85, new { htmlAttributes = new { @class = "form-control input-lg", @type = "text" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center m-t-40">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-primary waves-effect waves-light btn-lg w-lg" type="submit">Terminar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div> <!-- panel-body -->
+                    </div> <!-- panel -->
+                </div> <!-- col -->
+            </div><!-- Row -->
+
+        </div> <!-- content -->
+    </div>
+}

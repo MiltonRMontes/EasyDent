@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdEasyDentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblAntecedente">
+    <Key>
+      <PropertyRef Name="id_antecedente" />
+    </Key>
+    <Property Name="id_antecedente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk_historial" Type="int" Nullable="false" />
+    <Property Name="fk_patologia" Type="int" Nullable="false" />
+    <Property Name="observacion" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCita">
+    <Key>
+      <PropertyRef Name="id_cita" />
+    </Key>
+    <Property Name="id_cita" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_cita" Type="date" Nullable="false" />
+    <Property Name="descripcion" Type="text" Nullable="false" />
+    <Property Name="fk_odontologo" Type="int" Nullable="false" />
+    <Property Name="fk_paciente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblHistorial">
+    <Key>
+      <PropertyRef Name="id_historial" />
+    </Key>
+    <Property Name="id_historial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="motivo_consulta" Type="text" Nullable="false" />
+    <Property Name="enfermedad_actual" Type="text" Nullable="false" />
+    <Property Name="antecedentes_familiares" Type="text" />
+    <Property Name="cepilladas_dia" Type="int" Nullable="false" />
+    <Property Name="momento_cepilladas" Type="text" Nullable="false" />
+    <Property Name="usa_seda_dental" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="momento_seda" Type="text" Nullable="false" />
+    <Property Name="numero_dientes" Type="int" Nullable="false" />
+    <Property Name="dientes_cariados" Type="int" Nullable="false" />
+    <Property Name="dientes_obturados" Type="int" Nullable="false" />
+    <Property Name="dientes_extraidos" Type="int" Nullable="false" />
+    <Property Name="dientes_perdidos" Type="int" Nullable="false" />
+    <Property Name="total_dientes_cop" Type="int" Nullable="false" />
+    <Property Name="labios" Type="text" />
+    <Property Name="carrillos" Type="text" />
+    <Property Name="lengua" Type="text" />
+    <Property Name="amigdalas" Type="text" />
+    <Property Name="paladar_duro" Type="text" />
+    <Property Name="piso_boca" Type="text" />
+    <Property Name="frenillos" Type="text" />
+    <Property Name="mucosa_masticadora" Type="text" />
+    <Property Name="perfil" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="oclusion" Type="text" Nullable="false" />
+    <Property Name="actividad_muscular" Type="text" Nullable="false" />
+    <Property Name="atm_palpacion_muscular" Type="text" Nullable="false" />
+    <Property Name="diagnostico_presuntivo" Type="text" Nullable="false" />
+    <Property Name="diagnostico_definitivo" Type="text" />
+    <Property Name="interpretacion_paraclinicos" Type="text" />
+    <Property Name="pronostico" Type="text" />
+    <Property Name="plan_tratamiento" Type="text" />
+    <Property Name="evolucion" Type="text" />
+    <Property Name="fk_paciente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblOdontograma">
+    <Key>
+      <PropertyRef Name="id_odontograma" />
+    </Key>
+    <Property Name="id_odontograma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_odontograma" Type="date" Nullable="false" />
+    <Property Name="d_18" Type="varchar" MaxLength="200" />
+    <Property Name="d_17" Type="varchar" MaxLength="200" />
+    <Property Name="d_16" Type="varchar" MaxLength="200" />
+    <Property Name="d_15" Type="varchar" MaxLength="200" />
+    <Property Name="d_14" Type="varchar" MaxLength="200" />
+    <Property Name="d_13" Type="varchar" MaxLength="200" />
+    <Property Name="d_12" Type="varchar" MaxLength="200" />
+    <Property Name="d_11" Type="varchar" MaxLength="200" />
+    <Property Name="d_21" Type="varchar" MaxLength="200" />
+    <Property Name="d_22" Type="varchar" MaxLength="200" />
+    <Property Name="d_23" Type="varchar" MaxLength="200" />
+    <Property Name="d_24" Type="varchar" MaxLength="200" />
+    <Property Name="d_25" Type="varchar" MaxLength="200" />
+    <Property Name="d_26" Type="varchar" MaxLength="200" />
+    <Property Name="d_27" Type="varchar" MaxLength="200" />
+    <Property Name="d_28" Type="varchar" MaxLength="200" />
+    <Property Name="d_55" Type="varchar" MaxLength="200" />
+    <Property Name="d_54" Type="varchar" MaxLength="200" />
+    <Property Name="d_53" Type="varchar" MaxLength="200" />
+    <Property Name="d_52" Type="varchar" MaxLength="200" />
+    <Property Name="d_51" Type="varchar" MaxLength="200" />
+    <Property Name="d_61" Type="varchar" MaxLength="200" />
+    <Property Name="d_62" Type="varchar" MaxLength="200" />
+    <Property Name="d_63" Type="varchar" MaxLength="200" />
+    <Property Name="d_64" Type="varchar" MaxLength="200" />
+    <Property Name="d_65" Type="varchar" MaxLength="200" />
+    <Property Name="d_38" Type="varchar" MaxLength="200" />
+    <Property Name="d_37" Type="varchar" MaxLength="200" />
+    <Property Name="d_36" Type="varchar" MaxLength="200" />
+    <Property Name="d_35" Type="varchar" MaxLength="200" />
+    <Property Name="d_34" Type="varchar" MaxLength="200" />
+    <Property Name="d_33" Type="varchar" MaxLength="200" />
+    <Property Name="d_32" Type="varchar" MaxLength="200" />
+    <Property Name="d_31" Type="varchar" MaxLength="200" />
+    <Property Name="d_41" Type="varchar" MaxLength="200" />
+    <Property Name="d_42" Type="varchar" MaxLength="200" />
+    <Property Name="d_43" Type="varchar" MaxLength="200" />
+    <Property Name="d_44" Type="varchar" MaxLength="200" />
+    <Property Name="d_45" Type="varchar" MaxLength="200" />
+    <Property Name="d_46" Type="varchar" MaxLength="200" />
+    <Property Name="d_47" Type="varchar" MaxLength="200" />
+    <Property Name="d_48" Type="varchar" MaxLength="200" />
+    <Property Name="d_75" Type="varchar" MaxLength="200" />
+    <Property Name="d_74" Type="varchar" MaxLength="200" />
+    <Property Name="d_73" Type="varchar" MaxLength="200" />
+    <Property Name="d_72" Type="varchar" MaxLength="200" />
+    <Property Name="d_71" Type="varchar" MaxLength="200" />
+    <Property Name="d_81" Type="varchar" MaxLength="200" />
+    <Property Name="d_82" Type="varchar" MaxLength="200" />
+    <Property Name="d_83" Type="varchar" MaxLength="200" />
+    <Property Name="d_84" Type="varchar" MaxLength="200" />
+    <Property Name="d_85" Type="varchar" MaxLength="200" />
+    <Property Name="fk_historial" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPaciente">
+    <Key>
+      <PropertyRef Name="id_paciente" />
+    </Key>
+    <Property Name="id_paciente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombres" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidos" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tipo_documento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="numero_documento" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="80" />
+    <Property Name="telefono" Type="varchar" MaxLength="20" />
+    <Property Name="fecha_nacimiento" Type="date" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" />
+    <Property Name="estado" Type="int" Nullable="false" />
+    <Property Name="estado_civil" Type="varchar" MaxLength="20" />
+    <Property Name="sexo" Type="varchar" MaxLength="20" />
+    <Property Name="ocupacion" Type="varchar" MaxLength="50" />
+    <Property Name="celular" Type="varchar" MaxLength="30" />
+    <Property Name="nombre_acudiente" Type="nvarchar" MaxLength="50" />
+    <Property Name="relacion_acudiente" Type="varchar" MaxLength="50" />
+    <Property Name="telefono_acudiente" Type="varchar" MaxLength="30" />
+    <Property Name="fk_odontologo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPatologia">
+    <Key>
+      <PropertyRef Name="id_patologia" />
+    </Key>
+    <Property Name="id_patologia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUsuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipo_documento" Type="varchar" MaxLength="50" />
+    <Property Name="numero_documento" Type="varchar" MaxLength="20" />
+    <Property Name="nombres" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidos" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="titulos" Type="nvarchar" MaxLength="200" />
+    <Property Name="direccion_consultorio" Type="varchar" MaxLength="100" />
+    <Property Name="direccion_hogar" Type="varchar" MaxLength="100" />
+    <Property Name="telefono_consultorio" Type="varchar" MaxLength="20" />
+    <Property Name="telefono_personal" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="estado" Type="int" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="fecha_nacimiento" Type="date" />
+  </EntityType>
+  <Association Name="FK_tblAntecedente_tblHistorial">
+    <End Role="tblHistorial" Type="Self.tblHistorial" Multiplicity="1" />
+    <End Role="tblAntecedente" Type="Self.tblAntecedente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHistorial">
+        <PropertyRef Name="id_historial" />
+      </Principal>
+      <Dependent Role="tblAntecedente">
+        <PropertyRef Name="fk_historial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAntecedente_tblPatologia">
+    <End Role="tblPatologia" Type="Self.tblPatologia" Multiplicity="1" />
+    <End Role="tblAntecedente" Type="Self.tblAntecedente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPatologia">
+        <PropertyRef Name="id_patologia" />
+      </Principal>
+      <Dependent Role="tblAntecedente">
+        <PropertyRef Name="fk_patologia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCita_tblPaciente">
+    <End Role="tblPaciente" Type="Self.tblPaciente" Multiplicity="1" />
+    <End Role="tblCita" Type="Self.tblCita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPaciente">
+        <PropertyRef Name="id_paciente" />
+      </Principal>
+      <Dependent Role="tblCita">
+        <PropertyRef Name="fk_paciente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCita_tblUsuario">
+    <End Role="tblUsuario" Type="Self.tblUsuario" Multiplicity="1" />
+    <End Role="tblCita" Type="Self.tblCita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUsuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tblCita">
+        <PropertyRef Name="fk_odontologo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHistorial_tblPaciente">
+    <End Role="tblPaciente" Type="Self.tblPaciente" Multiplicity="1" />
+    <End Role="tblHistorial" Type="Self.tblHistorial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPaciente">
+        <PropertyRef Name="id_paciente" />
+      </Principal>
+      <Dependent Role="tblHistorial">
+        <PropertyRef Name="fk_paciente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblOdontograma_tblHistorial">
+    <End Role="tblHistorial" Type="Self.tblHistorial" Multiplicity="1" />
+    <End Role="tblOdontograma" Type="Self.tblOdontograma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHistorial">
+        <PropertyRef Name="id_historial" />
+      </Principal>
+      <Dependent Role="tblOdontograma">
+        <PropertyRef Name="fk_historial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPaciente_tblUsuario">
+    <End Role="tblUsuario" Type="Self.tblUsuario" Multiplicity="1" />
+    <End Role="tblPaciente" Type="Self.tblPaciente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUsuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="tblPaciente">
+        <PropertyRef Name="fk_odontologo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdEasyDentModelStoreContainer">
+    <EntitySet Name="tblAntecedente" EntityType="Self.tblAntecedente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCita" EntityType="Self.tblCita" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHistorial" EntityType="Self.tblHistorial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblOdontograma" EntityType="Self.tblOdontograma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPaciente" EntityType="Self.tblPaciente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPatologia" EntityType="Self.tblPatologia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUsuario" EntityType="Self.tblUsuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tblAntecedente_tblHistorial" Association="Self.FK_tblAntecedente_tblHistorial">
+      <End Role="tblHistorial" EntitySet="tblHistorial" />
+      <End Role="tblAntecedente" EntitySet="tblAntecedente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAntecedente_tblPatologia" Association="Self.FK_tblAntecedente_tblPatologia">
+      <End Role="tblPatologia" EntitySet="tblPatologia" />
+      <End Role="tblAntecedente" EntitySet="tblAntecedente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCita_tblPaciente" Association="Self.FK_tblCita_tblPaciente">
+      <End Role="tblPaciente" EntitySet="tblPaciente" />
+      <End Role="tblCita" EntitySet="tblCita" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCita_tblUsuario" Association="Self.FK_tblCita_tblUsuario">
+      <End Role="tblUsuario" EntitySet="tblUsuario" />
+      <End Role="tblCita" EntitySet="tblCita" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHistorial_tblPaciente" Association="Self.FK_tblHistorial_tblPaciente">
+      <End Role="tblPaciente" EntitySet="tblPaciente" />
+      <End Role="tblHistorial" EntitySet="tblHistorial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblOdontograma_tblHistorial" Association="Self.FK_tblOdontograma_tblHistorial">
+      <End Role="tblHistorial" EntitySet="tblHistorial" />
+      <End Role="tblOdontograma" EntitySet="tblOdontograma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPaciente_tblUsuario" Association="Self.FK_tblPaciente_tblUsuario">
+      <End Role="tblUsuario" EntitySet="tblUsuario" />
+      <End Role="tblPaciente" EntitySet="tblPaciente" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
